@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio de Banners</title>
+    <style>
+        /* Estilo CSS */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        header {
+            background-color: #6200ea;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        header button {
+            background-color: #fff;
+            color: #6200ea;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        header button:hover {
+            background-color: #6200ea;
+            color: #fff;
+        }
+        .container {
+            padding: 20px;
+        }
+        .banner {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .banner img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #6200ea;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        /* Estilo para o modo escuro */
+        body.dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+        body.dark-mode header {
+            background-color: #1f1f1f;
+        }
+        body.dark-mode footer {
+            background-color: #1f1f1f;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meu Portfólio de Banners</h1>
+        <p>Criatividade e design para o seu negócio!</p>
+        <button id="darkModeButton">Ativar Modo Escuro</button>
+    </header>
+    <div class="container">
+        <div class="banner">
+            <img src="https://via.placeholder.com/800x400" alt="Exemplo de Banner 1">
+        </div>
+        <div class="banner">
+            <img src="https://via.placeholder.com/800x400" alt="Exemplo de Banner 2">
+        </div>
+        <!-- Adicione mais banners aqui -->
+    </div>
+    <footer>
+        &copy; 2023 - Meu Portfólio de Banners
+    </footer>
+    <script>
+        // JavaScript
+        const darkModeButton = document.getElementById('darkModeButton');
+        const body = document.body;
+
+        darkModeButton.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
+                darkModeButton.textContent = 'Desativar Modo Escuro';
+            } else {
+                darkModeButton.textContent = 'Ativar Modo Escuro';
+            }
+        });
+    </script>
+</body>
+</html>
